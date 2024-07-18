@@ -1,10 +1,9 @@
 @use "config/variables" as var;
 @use "config/mixins" as mix;
 
-.card {
+.card-service {
   margin: 0 auto 2rem;
   max-width: 35rem;
- 
 
   &:last-of-type {
     margin-bottom: 0;
@@ -38,11 +37,5 @@
     @include mix.headingCursive;
     padding: 2rem 0;
     font-size: 3.4rem;
-  }
-
-  &__btn {
-    @include mix.button(var.$secondary-color, var.$white);
-    display: block;
-    border-radius: 0;
   }
 }

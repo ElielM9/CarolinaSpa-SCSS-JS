@@ -1,0 +1,16 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+[class$="__btn"] {
+  @include mix.button(var.$secondary-color, var.$white);
+}
+
+.card-service__btn {
+  display: block;
+  border-radius: 0; 
+}
+
+.cite__btn {
+  @include mix.button(var.$primary-color, var.$white);
+  padding: 1.5rem 10rem;
+}

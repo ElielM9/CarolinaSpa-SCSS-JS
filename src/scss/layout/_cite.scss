@@ -21,9 +21,4 @@
     color: var.$white;
     line-height: 1.8;
   }
-
-  &__btn {
-    @include mix.button(var.$primary-color, var.$white);
-    padding: 1.5rem 10rem;
-  }
 }
