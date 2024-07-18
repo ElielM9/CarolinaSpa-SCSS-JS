@@ -1,0 +1,48 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.card-product {
+  background-color: var.$white;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &__mask {
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+
+    @include mix.hover {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__content {
+    padding: 2rem;
+  }
+
+  &__name {
+    @include mix.heading;
+    font-size: 2.2rem;
+    color: var.$secondary-color;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  &__price {
+    margin: 0;
+    font-size: 2.6rem;
+    text-align: center;
+    color: var.$gray;
+  }
+}

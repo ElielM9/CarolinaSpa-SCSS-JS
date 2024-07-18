@@ -1,0 +1,10 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.cards {
+  &__grid {
+    @include mix.tablet {
+      @include mix.grid(3, 2rem);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.main-products {
+  &__heading {
+    @include mix.headingCursive;
+    margin-bottom: 5rem;
+  }
+
+  &__grid {
+    @include mix.grid(1, 2rem);
+
+    @include mix.tablet {
+      @include mix.grid(2, 2rem);
+    }
+
+    @include mix.desktop {
+      @include mix.grid(4, 2rem);
+    }
+  }
+}

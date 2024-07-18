@@ -1,0 +1,50 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.nav-social {
+  display: flex;
+  margin: 5rem 0;
+
+  @include mix.tablet {
+    margin: 0;
+  }
+
+  &--footer {
+    margin-top: 2rem;
+  }
+
+  &__link {
+    &::before {
+      content: "";
+      padding: 2rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+
+    &[href*="facebook.com"]::before {
+      background-image: url(../assets/img/icons/icono_facebook.svg);
+    }
+    &[href*="instagram.com"]::before {
+      background-image: url(../assets/img/icons/icono_instagram.svg);
+    }
+
+    &[href*="TikTok.com"]::before {
+      background-image: url(../assets/img/icons/icono_tiktok.svg);
+    }
+
+    &[href*="youtube.com"]::before {
+      background-image: url(../assets/img/icons/icono_youtube.svg);
+    }
+  }
+
+  &__accessible {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    display: block;
+  }
+}

@@ -1,0 +1,48 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.card {
+  margin: 0 auto 2rem;
+  max-width: 35rem;
+ 
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include mix.tablet {
+    max-width: unset;
+    margin: 0;
+  }
+
+  &__img {
+    width: 100%;
+    border: 0.5rem solid var.$white;
+    transition: transform 0.3s ease-in-out;
+
+    @include mix.hover {
+      &:hover {
+        transform: rotate(4deg) scale(1.2);
+      }
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 90%;
+    background-color: var.$white;
+    transform: translateY(-7rem);
+  }
+
+  &__heading {
+    @include mix.headingCursive;
+    padding: 2rem 0;
+    font-size: 3.4rem;
+  }
+
+  &__btn {
+    @include mix.button(var.$secondary-color, var.$white);
+    display: block;
+    border-radius: 0;
+  }
+}

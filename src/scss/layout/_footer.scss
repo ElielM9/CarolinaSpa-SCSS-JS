@@ -1,0 +1,58 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.footer {
+  padding-top: 5rem;
+
+  &__grid {
+    @include mix.tablet {
+      @include mix.grid(3, 2rem);
+    }
+  }
+
+  &__widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(1) {
+      @include mix.tablet {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(3) {
+      @include mix.tablet {
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+  }
+
+  &__heading {
+    @include mix.heading;
+    font-size: 3.4rem;
+  }
+
+  &__text {
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  &__shedule-item {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  &__copyright {
+    margin: 2rem auto 0;
+    padding: 2rem;
+    max-width: 120rem;
+    text-align: center;
+    color: var.$gray;
+    border-top: 0.1rem solid darken(var.$lightGray, 10%);
+  }
+}

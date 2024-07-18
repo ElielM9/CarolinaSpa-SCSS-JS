@@ -1,0 +1,29 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.cite {
+  padding: 5rem 0;
+  background-image: url(../assets/img/backgrounds/bg_citas.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+
+  &__heading {
+    @include mix.heading;
+    color: var.$white;
+    font-size: 5rem;
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: 60rem;
+    color: var.$white;
+    line-height: 1.8;
+  }
+
+  &__btn {
+    @include mix.button(var.$primary-color, var.$white);
+    padding: 1.5rem 10rem;
+  }
+}
